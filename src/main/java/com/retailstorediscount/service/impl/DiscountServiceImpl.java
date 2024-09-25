@@ -13,7 +13,7 @@ public class DiscountServiceImpl implements DiscountService {
         double totalAmount = bill.getTotalAmount();
         DiscountStrategy discountStrategy = DiscountStrategyFactory.getDiscountStrategy(bill.getUser().getUserType());
         double percentageDiscount = discountStrategy.applyDiscount(bill);
-        double flatDiscount = (int) (totalAmount / 100) * 5;
+        double flatDiscount = (totalAmount / 100) * 5;
         return totalAmount - percentageDiscount - flatDiscount;
     }
 }

@@ -4,7 +4,13 @@ import com.retailstorediscount.model.UserType;
 import com.retailstorediscount.service.DiscountStrategy;
 
 public class DiscountStrategyFactory {
-    public static DiscountStrategy getDiscountStrategy(UserType userType) {
+	
+	
+    private DiscountStrategyFactory() {
+		super();
+	}
+
+	public static DiscountStrategy getDiscountStrategy(UserType userType) {
         switch (userType) {
             case EMPLOYEE:
                 return new EmployeeDiscountStrategy();
