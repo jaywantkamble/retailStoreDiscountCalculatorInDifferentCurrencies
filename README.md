@@ -28,16 +28,31 @@ Discounts and Currency Conversion Logic:
   **Clone the repository:**
    ```bash
    git clone <[repository-url](https://github.com/jaywantkamble/retailStoreDiscountCalculatorInDifferentCurrencies)> --branch assignmentBranch
-
+  ```
   - Install dependencies:
-     ```bash
+    ```bash
      mvn install
+    ```
    - Running the Application
       ```bash
        mvn spring-boot:run
+     ```
    - Running the Test cases
-      ```bash
+     ```bash
        mvn test
+     ```
+
+   ## UML Diagram 
+![StoreDiscountAndCurrencyExchange](https://github.com/user-attachments/assets/e84fc4e6-f31b-4bef-b473-98c1238a4534)
+
+## Code Coverage Report
+![image](https://github.com/user-attachments/assets/cd6e40ca-9eaf-45d2-9e22-2a864085482c)
+
+## SonarLint Code Analysis Report
+![image](https://github.com/user-attachments/assets/71bb531e-5228-4858-8747-0bc4429e9e4a)
+
+
+
 
   
 
