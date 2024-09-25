@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "currency.exchange.api.url",
+    "type": "java.lang.String",
+    "description": "URL for exchange third party API https://www.exchangerate-api.com/"
+  },
+  {
+    "name": "exchange.rate.api.key",
+    "type": "java.lang.String",
+    "description": "Authentication key for the exchange third party https://www.exchangerate-api.com/"
+  }
+]}
