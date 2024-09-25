@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
-public class DiscountControllerTest {
+class DiscountControllerTest {
 
     @InjectMocks
     private DiscountController discountController;
@@ -38,7 +38,7 @@ public class DiscountControllerTest {
     }
 
     @Test
-    public void testCalculateNetPayableAmount() {
+    void testCalculateNetPayableAmount() {
         // Arrange
         User user = new User("John Doe", UserType.OTHER, LocalDate.of(2020, 1, 15));
         Item item1 = new Item("Laptop", 999.99, false);
@@ -62,7 +62,7 @@ public class DiscountControllerTest {
     }
 
     @Test
-    public void testExchangeRateNotAvailable() {
+    void testExchangeRateNotAvailable() {
         // Arrange
         User user = new User("Jane Doe", UserType.OTHER, LocalDate.of(2021, 5, 20));
         Item item1 = new Item("Book", 15.00, false);
@@ -79,7 +79,7 @@ public class DiscountControllerTest {
     }
 
     @Test
-    public void testDiscountCalculationFails() {
+    void testDiscountCalculationFails() {
         // Arrange
         User user = new User("Jim Bean", UserType.AFFILIATE, LocalDate.of(2019, 3, 12));
         Item item1 = new Item("Coffee Maker", 49.99, false);
@@ -99,7 +99,7 @@ public class DiscountControllerTest {
     }
 
     @Test
-    public void testEmptyBill() {
+    void testEmptyBill() {
         // Arrange
         User user = new User("Alice", UserType.OTHER, LocalDate.of(2022, 6, 30));
         Bill bill = new Bill(user, Arrays.asList());
@@ -120,7 +120,7 @@ public class DiscountControllerTest {
     }
 
     @Test
-    public void testBillWithNoItems() {
+    void testBillWithNoItems() {
         // Arrange
         User user = new User("Bob", UserType.AFFILIATE, LocalDate.of(2018, 9, 5));
         Bill bill = new Bill(user, Arrays.asList());
@@ -141,7 +141,7 @@ public class DiscountControllerTest {
     }
 
     @Test
-    public void testBillWithOneItem() {
+    void testBillWithOneItem() {
         // Arrange
         User user = new User("Charlie", UserType.OTHER, LocalDate.of(2023, 7, 20));
         Item item1 = new Item("Headphones", 199.99, false);

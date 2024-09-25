@@ -23,7 +23,7 @@ class DiscountServiceTest {
     }
 
     @Test
-    public void testEmployeeDiscount() {
+    void testEmployeeDiscount() {
         User user = new User("John",UserType.EMPLOYEE, LocalDate.now());
         List<Item> items = Arrays.asList(
             new Item("Item1", 200, false),
@@ -37,7 +37,7 @@ class DiscountServiceTest {
     }
 
     @Test
-    public void testAffiliateDiscount() {
+    void testAffiliateDiscount() {
         User user = new User("John", UserType.AFFILIATE, LocalDate.now());
         List<Item> items = Arrays.asList(
             new Item("Item1", 150, false),
@@ -51,7 +51,7 @@ class DiscountServiceTest {
     }
 
     @Test
-    public void testCustomerDiscount() {
+    void testCustomerDiscount() {
         User user = new User("John",UserType.CUSTOMER, LocalDate.now().minusYears(3));
         List<Item> items = Arrays.asList(
             new Item("Item1", 100, false),
@@ -65,7 +65,7 @@ class DiscountServiceTest {
     }
     
     @Test
-    public void testCustomerDiscountForLessThanTwoYearsOldCustomer() {
+    void testCustomerDiscountForLessThanTwoYearsOldCustomer() {
         User user = new User("John",UserType.CUSTOMER, LocalDate.now().minusYears(1));
         List<Item> items = Arrays.asList(
             new Item("Item1", 100, false),
@@ -79,7 +79,7 @@ class DiscountServiceTest {
     }
 
     @Test
-    public void testFlatDiscountOnly() {
+    void testFlatDiscountOnly() {
         User user = new User("John",UserType.OTHER, LocalDate.now());
         List<Item> items = Arrays.asList(
             new Item("Item1", 150, true),
@@ -94,7 +94,7 @@ class DiscountServiceTest {
     
     
     @Test
-    public void testOTHERCustomerDiscountWithNonGroceryItems() {
+    void testOTHERCustomerDiscountWithNonGroceryItems() {
         User user = new User("John",UserType.OTHER, LocalDate.now());
         List<Item> items = Arrays.asList(
             new Item("Item1", 150, false),

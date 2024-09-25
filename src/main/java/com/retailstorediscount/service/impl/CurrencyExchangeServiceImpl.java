@@ -25,7 +25,7 @@ public class CurrencyExchangeServiceImpl implements CurrencyExchangeService {
     public double fetchExchangeRate(String baseCurrency, String targetCurrency) {
         ExchangeRateResponse response = exchangeRateClient.getExchangeRates(baseCurrency);
         if ("success".equals(response.getResult())) {
-            return response.getConversion_rates().get(targetCurrency);
+            return response.getConversionRates().get(targetCurrency);
         } else {
             throw new CurrencyExchangeException("Failed to fetch exchange rate");
         }

@@ -5,7 +5,7 @@ import java.util.Map;
 public class ExchangeRateResponse {
     private String result;
     private String base;
-    private Map<String, Double> conversion_rates;
+    private Map<String, Double> conversionRates;
 
     // Getters and Setters
     public String getResult() {
@@ -24,11 +24,11 @@ public class ExchangeRateResponse {
         this.base = base;
     }
 
-    public Map<String, Double> getConversion_rates() {
-        return conversion_rates;
+    public Map<String, Double> getConversionRates() {
+        return conversionRates;
     }
 
-    public void setConversion_rates(Map<String, Double> conversion_rates) {
-        this.conversion_rates = conversion_rates;
+    public void setConversionRates(Map<String, Double> conversionRrates) {
+        this.conversionRates = conversionRrates;
     }
 }

@@ -29,17 +29,75 @@ Discounts and Currency Conversion Logic:
    ```bash
    git clone <[repository-url](https://github.com/jaywantkamble/retailStoreDiscountCalculatorInDifferentCurrencies)> --branch assignmentBranch
 
+  ```
   - Install dependencies:
-     ```bash
+    ```bash
      mvn install
+    ```
    - Running the Application
       ```bash
        mvn spring-boot:run
+     ```
    - Running the Test cases
-      ```bash
+     ```bash
        mvn test
+     ```
 
-  
+   ## UML Diagram 
+![StoreDiscountAndCurrencyExchange](https://github.com/user-attachments/assets/e84fc4e6-f31b-4bef-b473-98c1238a4534)
 
-   
+## Code Coverage Report
+![image](https://github.com/user-attachments/assets/cd6e40ca-9eaf-45d2-9e22-2a864085482c)
+
+## SonarLint Code Analysis Report
+![image](https://github.com/user-attachments/assets/71bb531e-5228-4858-8747-0bc4429e9e4a)
+
+## API Testing Using Postman
+1. Login with predefined credentials admin/admin and get JWT token
+- POST : http://localhost:8090/api/auth/login
+- Body : 
+{
+    "username": "admin",
+    "password": "admin"
+}
+![image](https://github.com/user-attachments/assets/b2e79ef6-21b9-43c3-b40a-d90a05d46c5a)
+
+2. Use above JWT Token in Authorization to calculate discount
+- Body :
+{
+  "user": {
+    "name": "John Doe",
+    "userType": "CUSTOMER", 
+    "customerSince": "2020-01-15"
+  },
+  "items": [
+    {
+      "name": "Laptop",
+      "price": 888.99,
+      "quantity": 1
+    },
+    {
+      "name": "Mouse",
+      "price": 25.50,
+      "quantity": 2
+    },
+    {
+      "name": "Keyboard",
+      "price": 75.00,
+      "quantity": 1
+    }
+  ],
+  "originalCurrency": "USD",
+  "targetCurrency": "AED"
+}
+
+
+![image](https://github.com/user-attachments/assets/80d9dc5c-4aa2-454a-9891-582fca1e33cf)
+
+----
+![image](https://github.com/user-attachments/assets/60f95235-4061-46cb-9094-b0aa0c067ae9)
+
+
+
+
 

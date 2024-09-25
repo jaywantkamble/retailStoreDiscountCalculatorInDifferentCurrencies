@@ -40,7 +40,7 @@ class CurrencyExchangeServiceImplTest {
         // Create an instance of ExchangeRateResponse
         ExchangeRateResponse exchangeRateResponse = new ExchangeRateResponse();
         exchangeRateResponse.setResult("success");
-        exchangeRateResponse.setConversion_rates(Map.of("EUR", 0.85));
+        exchangeRateResponse.setConversionRates(Map.of("EUR", 0.85));
 
         // Mock the API response
         when(exchangeRateClient.getExchangeRates(anyString())).thenReturn(exchangeRateResponse);

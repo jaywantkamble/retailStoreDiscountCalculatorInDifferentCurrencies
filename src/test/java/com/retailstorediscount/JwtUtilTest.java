@@ -2,7 +2,6 @@ package com.retailstorediscount;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -10,7 +9,6 @@ import org.mockito.MockitoAnnotations;
 
 import com.retailstorediscount.util.JwtUtil;
 
-import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
