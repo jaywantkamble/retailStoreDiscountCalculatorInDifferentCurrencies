@@ -28,6 +28,7 @@ Discounts and Currency Conversion Logic:
   **Clone the repository:**
    ```bash
    git clone <[repository-url](https://github.com/jaywantkamble/retailStoreDiscountCalculatorInDifferentCurrencies)> --branch assignmentBranch
+
   ```
   - Install dependencies:
     ```bash
@@ -99,9 +100,4 @@ Discounts and Currency Conversion Logic:
 
 
 
-
-
-  
-
-   
 
