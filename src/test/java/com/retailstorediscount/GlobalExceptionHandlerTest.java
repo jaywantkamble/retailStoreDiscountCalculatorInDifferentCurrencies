@@ -9,12 +9,12 @@ import com.retailstorediscount.exception.GlobalExceptionHandler;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GlobalExceptionHandlerTest {
+class GlobalExceptionHandlerTest {
 
     private final GlobalExceptionHandler globalExceptionHandler = new GlobalExceptionHandler();
 
     @Test
-    public void testHandleCurrencyExchangeException() {
+    void testHandleCurrencyExchangeException() {
         // Arrange
         String errorMessage = "Currency exchange rate not found";
         CurrencyExchangeException exception = new CurrencyExchangeException(errorMessage);
@@ -28,7 +28,7 @@ public class GlobalExceptionHandlerTest {
     }
     
     @Test
-    public void testConstructorWithMessageAndCause() {
+    void testConstructorWithMessageAndCause() {
         // Arrange
         String errorMessage = "Currency exchange rate not found";
         Throwable cause = new IllegalArgumentException("Invalid argument");
